@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import axios from '../api';
+import {api} from '../api';
 import { useScoreCard } from '../hooks/useScoreCard';
 
 const Wrapper = styled.section`
@@ -21,7 +21,7 @@ const Header = () => {
   const handleClearDB = async () => {
     const {
       data: { message },
-    } = await axios.delete('/cards');
+    } = await api.delete('/cards');
     clearMessage(message);
     //addRegularMessage(message);
   };

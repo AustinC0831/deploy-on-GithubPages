@@ -12,7 +12,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 import { useStyles } from '../hooks';
-import axios from '../api';
+import { api } from '../api';
 import { useScoreCard } from '../hooks/useScoreCard';
 
 const Wrapper = styled.section`
@@ -64,7 +64,7 @@ const Body = () => {
   const handleAdd = async () => {
     const {
       data: { message, card, afterMessage },
-    } = await axios.post('/card', {
+    } = await api.post('/card', {
       name,
       subject,
       score,
