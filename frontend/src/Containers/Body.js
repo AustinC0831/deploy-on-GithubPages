@@ -83,7 +83,7 @@ const Body = () => {
   const handleQuery = async () => {
     const {
       data: { messages, message },
-    } = await axios.get('/cards', {
+    } = await api.get('/cards', {
       params: {
         type: queryType,
         queryString,
