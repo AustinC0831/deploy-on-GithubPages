@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage":"https://austinc0831.github.io/deploy-on-GithubPages/",
   "scripts": {
     "start": "cd frontend && yarn start",
     "server": "cd backend && yarn start",
-    "install:prod": "cd frontend && yarn && cd ../backend && yarn"
+    "install:prod": "cd frontend && yarn && cd ../backend && yarn",
+    "predeploy" : "yarn build",
+    "deploy" : "gh-pages –d build"
   },
   "dependencies": {
     "gh-pages": "^4.0.0"
