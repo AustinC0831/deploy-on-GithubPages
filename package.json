@@ -1,0 +1,14 @@
+{
+  "name": "hw8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "server": "cd backend && yarn start",
+    "install:prod": "cd frontend && yarn && cd ../backend && yarn"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
